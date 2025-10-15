@@ -26,11 +26,44 @@ No Docker, no Ansible, no complexity. Just Python, SSH, nginx, and systemd.
 
 ## Installation
 
+### macOS
+
 ```bash
+# Install Python 3 (if not already installed)
+brew install python3
+
+# Install dbbasic-deploy
+pip3 install dbbasic-deploy
+```
+
+### Windows 11
+
+```powershell
+# Install Python from python.org or use winget
+winget install Python.Python.3.12
+
+# Install dbbasic-deploy
 pip install dbbasic-deploy
 ```
 
-Or install from source:
+**Note:** On Windows, you'll also need an SSH client. Windows 11 includes OpenSSH by default, but you may need to enable it:
+```powershell
+# Enable OpenSSH (run as Administrator)
+Add-WindowsCapability -Online -Name OpenSSH.Client
+```
+
+### Ubuntu/Debian
+
+```bash
+# Install Python and pip
+sudo apt update
+sudo apt install python3 python3-pip
+
+# Install dbbasic-deploy
+pip3 install dbbasic-deploy
+```
+
+### Install from source
 
 ```bash
 git clone https://github.com/askrobots/dbbasic-deploy
